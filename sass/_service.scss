@@ -79,27 +79,27 @@
                     background-size: cover;
                     background-position: center center;
                     z-index: -1;
+                    transition: all 0.4s;
 
                     @include desktop {
-                        width: 336px;
-                        height: 206px;
                         top: -160px;
                         left: -110px;
+                        transform: scale(0.8);
                     }
 
                     @include desktop-s {
 
-                        width: 256px;
-                        height: 166px;
                         top: -130px;
                         left: -90px;
+                        transform: scale(0.6);
+
                     }
 
                     @include tab {
-                        width: 376px;
-                        height: 246px;
+
                         top: -100px;
                         left: -260px;
+                        transform: scale(0.9);
                     }
 
                 }
@@ -149,26 +149,26 @@
                     background-size: cover;
                     background-position: center center;
                     z-index: -1;
+                    transition: all 0.4s;
+                    
 
                     @include desktop {
-                        width: 336px;
-                        height: 206px;
                         top: -160px;
                         left: -110px;
+                        transform: scale(0.8);
+
                     }
                     @include desktop-s {
-
-                        width: 256px;
-                        height: 166px;
                         top: -130px;
                         left: -90px;
+                        transform: scale(0.6);
+
                     }
                     @include tab {
-
-                        width: 376px;
-                        height: 246px;
                         top: -100px;
                         left: -260px;
+                        transform: scale(0.9);
+
                     }
 
                 }
@@ -217,26 +217,25 @@
                     background-size: cover;
                     background-position: center center;
                     z-index: -1;
+                    transition: all 0.4s;
 
                     @include desktop {
-                        width: 336px;
-                        height: 206px;
                         top: -160px;
                         left: -110px;
+                        transform: scale(0.8);
+
                     }
                     @include desktop-s {
-
-                        width: 256px;
-                        height: 166px;
                         top: -130px;
                         left: -90px;
+                        transform: scale(0.6);
+
                     }
                     @include tab {
-
-                        width: 376px;
-                        height: 246px;
                         top: -100px;
                         left: -260px;
+                        transform: scale(0.9);
+
                     }
 
                 }
