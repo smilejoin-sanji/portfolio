@@ -1,0 +1,204 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.header {
+    position: relative;
+    display: flex;
+    // gap: 115px;
+    width: 80%;
+    height: 140px;
+    padding: 15px 0;
+    border-bottom: 2px solid $mainColor;
+
+    @include mobile {
+        flex-direction: column;
+        width: 100vw;
+        height: 100px;
+        gap: 0;
+        padding: 0 0 0 5%;
+        margin: 0;
+    }
+
+    &__logoArea {
+        flex: 0 1 45%;
+        margin-left: 5%;
+
+        @include mobile {
+            width: 70%;
+            height: 70%;
+            margin: 0;
+        }
+
+        &>a {
+            display: flex;
+            align-items: center;
+            gap: 5%;
+            width: 100%;
+            height: 100%;
+            color: #000198;
+
+            .logo {
+                height: 100px;
+
+                @include mobile {
+                    width: 20%;
+                }
+
+                img {
+                    height: 100%;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .title {
+                font-size: clamp(2.2em, 2vw, 2.6em);
+
+                @include mobile {
+                    flex: 1;
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+
+    &__access {
+        display: flex;
+        align-items: flex-end;
+        color: $mainColor;
+        font-size: 1.6em;
+
+
+        .address {
+            margin-right: 10px;
+        }
+
+        .tel {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__notice {
+        position: absolute;
+        top: 0;
+        right: -160px;
+        display: flex;
+        width: 100px;
+        height: 320px;
+        color: #fff;
+        background: #EF8E3C;
+        overflow: hidden;
+        padding: 30px 15px 0;
+
+        @include mobile {
+            display: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -35px;
+            left: 15px;
+            width: 70px;
+            height: 70px;
+            background: #fff;
+            transform: rotate(45deg);
+        }
+
+        .notice-left {
+            font-size: 3em;
+            letter-spacing: 0.3em;
+            writing-mode: vertical-rl;
+        }
+
+        .notice-right {
+            margin-top: 30px;
+            font-size: 1.8em;
+            writing-mode: vertical-rl;
+        }
+    }
+
+    .mobile_navBox {
+        @include mobile {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            z-index: 9999;
+
+            &>span {
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: $mainColor;
+                transition-duration: 0.4s;
+
+                &:nth-child(1) {
+                    top: 5px;
+                }
+
+                &:nth-child(2) {
+                    top: 19px;
+                }
+
+                &:nth-child(3) {
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+
+    // .mobile_navBox {
+    //     display: none;
+    //     position: absolute;
+    //     top: 3px;
+    //     right: 0;
+    //     z-index: 9999;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+    //     gap: 10px;
+    //     width: 60px;
+    //     height: 60px;
+    //     // background: #3977AD;
+
+    //     @include mobile {
+    //         display: flex;
+    //     }
+
+    //     &>span {
+    //         display: block;
+    //         width: 30px;
+    //         height: 2px;
+    //         border-top: 2px solid #3977AD;
+    //     }
+    // }
+
+    .nav_is-close {
+        position: fixed;
+        gap: 20px;
+
+        &>span {
+            border-top: 2px solid #fff;
+        }
+
+        .line1 {
+            // transform: translateY(11px)rotate(45deg);
+            transform: translateY(15px)rotate(-315deg);
+        }
+
+        .line2 {
+            opacity: 0;
+        }
+
+        .line3 {
+            // transform: translateY(-11px)rotate(-45deg);
+            transform: translateY(-13px)rotate(315deg);
+        }
+    }
+}

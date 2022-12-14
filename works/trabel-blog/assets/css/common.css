@@ -1,0 +1,246 @@
+﻿@charset "utf-8";
+
+body {
+	background-color: #fff;
+}
+
+/* ============ header sterd ============ */
+header {
+	line-height: 2.5;
+}
+.logo {
+	width: 1200px;
+	margin: 0 auto;
+}
+.logo-text {
+	font-weight: 400;
+	font-size: 28px;
+}
+/* ============ header end ============ */
+
+/* ============ nav start ============ */
+#nav {
+
+	height: 40px;
+	line-height: 2.5;
+	background-color: #000;
+}
+
+.nav-box {
+	display: flex;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.nav-items {
+	font-size: 14px;
+	color: #fff;
+	margin-right: 40px;
+}
+
+/* ============ nav end ============ */
+/* ============ pickup start ============ */
+#pickup {
+	width: 1200px;
+	height: 360px;
+	margin: 30px auto;
+}
+
+.pickup-box {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	text-align: center;
+}
+
+.pickup-items{
+	flex:  1 1 auto;
+	max-width: 380px;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+.pickup-text {
+	font-weight: 700;
+	text-align: left;
+	margin: 15px 0 30px;
+}
+
+.links-btn {
+	font-size: 12px;
+	border-bottom: 2px solid #ccc;
+}
+
+/* ============ pickup end ============ */
+/* ============ main start ============ */
+#main {
+	display: flex;
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.main-containar {
+	flex: 0 0 750px;
+	margin-right: 50px;
+}
+.main-items {
+	height: 700px;
+	text-align: center;
+}
+.main-title {
+	font-size: 24px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+.category, .main-items span {
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.main-text {
+	padding: 20px 0;
+	text-align: left;
+
+}
+
+		/* ============ aside start ============ */
+.aside {
+	flex: 0 0 350px;
+}
+.profile {
+	text-align: center;
+}
+
+.author {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 100px 20px;
+}
+
+.profile h2 {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.profile-text {
+	font-size: 14px;
+}
+		/* ============ ranking start ============ */
+.ranking-img {
+	width: 100%;
+}
+
+.ranking {
+	text-align: center;
+}
+
+.ranking-text {
+	padding: 20px 0;
+}
+
+.ranking-title {
+	font-weight: 400;
+	font-size: 14px;
+	padding: 10px 0;
+	margin-bottom: 15px;
+	text-align: left;
+}
+		/* ============ ranking end ============ */
+
+.archive {
+	text-align: center;
+}
+
+.archive-title {
+	font-size: 16px;
+	padding: 20px;
+	border-bottom: 1px solid #999;
+}
+
+.archive-items {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #999;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 20px;
+}
+		/* ============ aside end ============ */
+
+/* ============ main end ============ */
+
+
+/* ============ footer start ============ */
+#footer {
+	background: #f7f7f7;
+	padding-top: 50px;
+	height: 500px;
+}
+
+#footer > .container {
+	display: flex;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.about {
+	flex: 0 0 380px;
+	margin-right: 50px;
+}
+
+.footer-title {
+	font-size: 16px;
+	margin-bottom: 50px;
+}
+.about-text {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.about-list-items {
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	padding-left: 20px;
+}
+
+.about-list-items:after {
+	position: absolute;
+	top: 9px;
+	left: 7px;
+	display: block;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: #333;
+	transform: rotate(45deg);
+	overflow: hidden;
+	margin-left: -5px;
+}
+.menu {
+	flex: 0 0 380px;
+}
+.menu-list {
+	border-top: 1px solid #333;
+}
+
+.menu-items {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #333;
+	padding-left: 20px;
+	font-size: 12px;
+}
+/* ============ footer end ============ */
+

@@ -1,0 +1,168 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    // align-items: center;
+    width: 130px;
+    height: 100vh;
+    background: #3977AD;
+    padding: 33px 0;
+    transition: all 0.6s;
+    transition-duration: 0.4s;
+
+    &:hover {
+        width: 300px;
+    }
+
+    @include mobile {
+        display: flex;
+        width: 75vw;
+        top: 0;
+        right: -400px;
+        opacity: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 35px;
+        // width: 100%;
+        // height: 100%;
+        // padding: 33px 0;
+
+        @include mobile {
+            padding-left: 10%;
+            gap: 15px;
+        }
+
+
+        &__items {
+            width: 100px;
+            height: 100px;
+            background: $mainColor;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transition: all 0.6s;
+
+            &:hover {
+                width: 270px;
+
+                &>a {
+
+                    &>.title {
+                        display: none;
+                    }
+
+                    &>.subTitle {
+                        transform: translate(-30px, -25px);
+                        font-weight: 700;
+                        font-size: 2.7em;
+                    }
+                }
+            }
+
+            &:first-child {
+                background: #f7db4fdb;
+
+                @include mobile {
+                    background: none;
+                }
+            }
+
+            @include mobile {
+                width: 220px;
+                height: 80px;
+                background: none;
+                border-bottom: 1px solid #fff;
+                border-radius: 0;
+            }
+
+            &>a {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+
+                @include mobile {
+                    align-items: baseline;
+                    gap: 10px;
+                }
+
+                .style-email {
+                    line-height: 4rem;
+                    font-family: 'icomoon';
+                }
+
+                .title {
+                    font-size: 5em;
+                    font-weight: 700;
+                    // background: #000;
+                    transition: all 0.2s;
+                }
+
+                .subTitle {
+                    position: absolute;
+                    bottom: 0;
+                    left: 30%;
+                    width: 100%;
+                    font-size: 1.1em;
+                    transition: all 0.6s;
+
+                    @include mobile {
+                        position: relative;
+                        left: 0;
+                        font-size: 1.4em;
+
+                    }
+                }
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+
+        .back_is-active {
+            display: block;
+        }
+    }
+
+    .mobile-notice {
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 10%;
+        color: #fff;
+        font-weight: 700;
+        border-bottom: 2px solid #EF8E3C;
+
+        @include mobile {
+            display: block;
+        }
+
+        .notice-top {
+            font-size: 2.6em;
+        }
+
+        .notice-bottom {
+            font-size: 1.4em;
+        }
+    }
+}
+
+
+// モバイル時にメニューを表示させる
+.nav_is-active {
+    @include mobile {
+        right: 0;
+        opacity: 1;
+    }
+}

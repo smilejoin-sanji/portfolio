@@ -1,0 +1,100 @@
+.header {
+    display: flex;
+    height: 80px;
+    line-height: 50px;
+    padding: 15px 0;
+    background: #fff;
+
+    @include mb {
+        justify-content: space-between;
+        position: fixed;
+        align-items: center;
+        height: 50px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    &__logo {
+
+        &__text {
+            font-size: 48px;
+
+            @include mb {
+                font-size: 33px;
+            }
+        }
+    }
+
+    &__menu {
+        margin-left: auto;
+
+        @include mb {
+            display: none;
+        }
+
+        &__list {
+            display: flex;
+
+            &__items {
+                width: 170px;
+                height: 50px;
+                line-height: 53px;
+                background: $colorRed;
+                margin-left: 25px;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        font-family: 'icomoon';
+
+        @include mb {
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 32px;
+            font-size: 40px;
+            margin-left: auto;
+            // overflow: hidden;
+        }
+    }
+
+    &__mobile__menu {
+        display: none;
+        position: relative;
+        font-size: 16px;
+        z-index: 1;
+        // margin-top: 400px;
+
+        &__list {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: -322px;
+            border-radius: 10px;
+            background: $colorRed;
+
+            &__items {
+                width: 300px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    // &__mobile__is-active {
+    //     display: block;
+    // }
+
+    .is-active {
+        display: block;
+    }
+}

@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    justify-content: end;
+    padding: 20px 0 35px;
+
+    @include mb {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+
+        &__items {
+            padding: 0 10px;
+        }
+    }
+}

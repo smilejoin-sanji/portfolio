@@ -1,0 +1,1000 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.topContent {
+    position: relative;
+    width: 80%;
+    padding-top: 84px;
+
+    @include mobile {
+        width: 100vw;
+        padding-top: 20px;
+        overflow: hidden;
+    }
+
+    article.contents__is-active {
+        display: block;
+    }
+
+    .contents_container {
+        display: none;
+    }
+
+    .top-default {
+        overflow: hidden;
+        &__img {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 660px;
+            background: $mainColor;
+
+            @include mobile {
+                position: relative;
+                height: 244px;
+            }
+
+            .imgArea {
+                width: 100%;
+                height: 100%;
+
+                @include mobile {
+                    position: absolute;
+                    left: -30%;
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .textArea {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                color: #fff;
+                writing-mode: vertical-rl;
+                padding-top: 80px;
+
+                @include mobile {
+                    // display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    // width: 35%;
+                    // height: 100%;
+                    padding-top: 5px;
+                    gap: 0;
+                    font-weight: 700;
+                }
+
+                .title {
+                    margin: 20px 20px 0;
+                    font-size: 4em;
+                    letter-spacing: 0.3em;
+
+                    @include mobile {
+                        margin: 10px 10px 0 5px;
+                        font-size: 1.8em;
+                    }
+                }
+
+                .subTitle {
+                    font-size: 2em;
+                    letter-spacing: 0.4em;
+
+                    @include mobile {
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+
+        &__notice {
+            position: absolute;
+            bottom: 270px;
+            right: -16%;
+            width: 725px;
+            height: 275px;
+            background: #fff;
+            box-shadow: 2px 2px 5px -0.4px;
+            padding: 10px 15px;
+
+            @include mobile {
+                width: 100vw;
+                height: 150px;
+                position: relative;
+                bottom: 0;
+                right: 0;
+                margin-left: auto;
+                margin-top: 10px;
+                box-shadow: none;
+            }
+
+            .noticeList {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                width: 80%;
+                height: 80%;
+                padding: 3% 2%;
+
+                @include mobile {
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 95vw;
+                }
+
+                &__items {
+                    @include mobile {
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 5%;
+                    }
+
+                    &>a {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 2.5em;
+                        border-bottom: 1px solid #E2E2E2;
+
+                        @include mobile {
+                            font-size: 1.4em;
+                        }
+
+                        &>div {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+
+            .more {
+                width: 30%;
+                margin-left: auto;
+                font-family: 'Gothic';
+
+                &>a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 2.5em;
+                    // background: #000;
+
+                    @include mobile {
+                        font-size: 1.8em;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 30%;
+                        height: 20%;
+                        border-bottom: 1px solid #373737;
+                        border-right: 2px solid #373737;
+                        transform: skew(45deg);
+
+                        @include mobile {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__vilus {
+            width: 55%;
+            margin-left: 5%;
+            padding: 5%;
+
+            @include mobile {
+                width: 100vw;
+                padding-left: 5%;
+                margin: 0;
+
+            }
+
+            .title {
+                color: #E66D6D;
+                font-size: 2.4em;
+                margin-bottom: 20px;
+
+                @include mobile {
+                    font-size: 1.6em;
+                }
+            }
+
+            &>p {
+                font-size: 2.2em;
+
+                @include mobile {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+
+    .first-user {
+        // display: none;
+
+        .description {
+            padding-left: 202px;
+            font-size: 1.6em;
+            margin-bottom: 50px;
+
+            @include mobile {
+                padding: 0 15px;
+            }
+
+            &__list {
+                padding: 21px 0 28px;
+                font-size: 22px;
+
+                @include mobile {
+                    font-size: 18px;
+                    padding: 31px 0 38px
+                }
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+
+            &>span {
+                border-bottom: 3px solid rgba(71, 162, 242, .56);
+            }
+        }
+    }
+
+    .course-fees {
+        // display: none;
+        position: relative;
+        padding-left: 202px;
+
+
+        @include mobile {
+            padding: 0 15px;
+        }
+
+        .topCopy {
+            font-size: 1.6em;
+        }
+
+        .course {
+            position: relative;
+            margin-top: 40px;
+            font-size: 1.4em;
+
+            .title {
+                display: flex;
+                align-items: baseline;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                &>span {
+                    font-size: 1.1rem;
+                    margin-right: 23px;
+                    color: #3977AD;
+                }
+            }
+
+            &__list {
+                position: relative;
+                display: flex;
+                gap: 20px;
+                font-size: 1.1rem;
+                padding-left: 97px;
+                margin-top: 20px;
+
+                @include mobile {
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    gap: 5px;
+                    height: 140px;
+                    padding: 0;
+                    font-size: 1.1em;
+                    // overflow: auto;
+                }
+
+                &__items {
+                    height: 40px;
+
+                    @include mobile {
+                        // width: 40px;
+                        padding: 0 5px;
+                    }
+
+                    &>a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        line-height: 2rem;
+                        color: #3977AD;
+
+                        &:hover {
+                            border-bottom: 2px solid #3977AD;
+                        }
+                    }
+                }
+
+                .course__line {
+                    position: absolute;
+                    left: 30px;
+                    top: 3px;
+                    width: 55px;
+                    height: 15px;
+                    border-left: 2px solid #3977AD;
+                    border-bottom: 2px solid #3977AD;
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+            }
+
+            &__listContents {
+                width: 100%;
+                height: 260px;
+                // background: #000;
+                margin-top: 30px;
+                padding-left: 97px;
+
+                @include mobile {
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                &__items {
+                    width: 960px;
+                    height: 100%;
+                    background: $mainColor;
+                    border-radius: 30px;
+                    padding: 38px 35px 0 70px;
+                    color: #fff;
+
+                    @include mobile {
+                        width: 100%;
+                        height: 100%;
+                        padding: 50px 20px 20px;
+                    }
+
+                    .copyright {
+                        width: 100%;
+                        height: 20%;
+                        font-size: 1.1rem;
+
+                        @include mobile {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .descriptionArea {
+                        display: flex;
+                        gap: 75px;
+                        width: 100%;
+                        height: 70%;
+                        padding-left: 20px;
+
+                        @include mobile {
+                            flex-direction: column;
+                            padding: 0;
+                            gap: 20px;
+                            margin-top: 15px;
+                        }
+
+                        &__charge {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 30px;
+                            width: 30%;
+                            height: 100%;
+                            font-size: 1.1rem;
+
+                            @include mobile {
+                                flex-direction: row;
+                                justify-content: space-between;
+                                gap: 15px;
+                                font-size: 16px;
+                                width: 100%;
+                                height: auto;
+                            }
+
+                            &>div {
+                                display: flex;
+
+                                @include mobile {
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+
+                                .count {
+                                    flex: 1;
+                                }
+
+                                .price {
+                                    flex: 2;
+                                }
+                            }
+                        }
+
+                        &__description {
+                            width: 50%;
+                            height: 100%;
+                            background: #fff;
+                            border-radius: 15px;
+                            color: #373737;
+                            padding: 15px;
+
+                            @include mobile {
+                                width: 100%;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__coupon {
+                position: absolute;
+                bottom: -55px;
+                left: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                width: 242px;
+                height: 98px;
+                font-size: 0.8rem;
+                color: #fff;
+                background: url(../images/coupon_bg.png) no-repeat;
+                background-size: cover;
+                padding: 24px 0 0 24px;
+
+                @include mobile {
+                    left: auto;
+                    top: 177px;
+                    right: 0;
+                }
+            }
+        }
+
+        .linkArea {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 30%;
+            margin: 80px 0 0 auto;
+
+            @include mobile {
+                width: 70%;
+                gap: 15px;
+                // width: 40%;
+                padding: 10px 10px 30px;
+                margin-top: 20px;
+            }
+
+            &>a {
+                display: block;
+                font-size: 2.2em;
+                color: $mainColor;
+                border-bottom: 2px solid $mainColor;
+
+                @include mobile {
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+
+    .staff {
+        // display: none;
+        position: relative;
+        width: 100%;
+        height: 75vh;
+        background: url(../images/owner.png) no-repeat $mainColor;
+        background-position: center bottom;
+
+        @include mobile {
+            height: auto;
+            background: none;
+        }
+
+        &__img {
+            display: none;
+            width: 100vw;
+            height: 40vh;
+            background: url(../images/owner.png) no-repeat;
+            background-size: cover;
+            background-position: center bottom;
+
+            @include mobile {
+                display: block;
+            }
+        }
+
+        &>div {
+            position: absolute;
+            top: 10px;
+            width: 30%;
+            height: 30%;
+            background: #fff;
+            font-size: 1.6em;
+            overflow: auto;
+            padding: 10px;
+
+            @include mobile {
+                position: static;
+                width: 100vw;
+                margin-bottom: 15px;
+            }
+
+            &:nth-child(2) {
+                top: 10px;
+                left: 140px
+            }
+
+            &:nth-child(3) {
+                top: 240px;
+                left: 70px
+            }
+
+            &:nth-child(4) {
+                top: 470px;
+                left: 60px
+            }
+
+            &:nth-child(5) {
+                top: 30px;
+                right: 50px;
+                height: 45%;
+            }
+
+            &:last-child {
+                top: 375px;
+                right: 60px;
+                height: 45%;
+
+                @include mobile {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:nth-child(2n) {
+                @include mobile {
+                    color: #fff;
+                    background: $mainColor;
+                }
+            }
+        }
+    }
+
+    .access {
+        // display: none;
+        width: 100%;
+        height: 660px;
+        background: $mainColor;
+        padding: 7% 5%;
+
+        @include mobile {
+            height: calc(100vh - 120px);
+            background: none;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+
+            @include mobile {
+                flex-direction: column-reverse;
+                gap: 35px;
+                width: 100%;
+                height: auto;
+            }
+
+            .map {
+                width: 60%;
+                height: 100%;
+                background: #ccc;
+
+                @include mobile {
+                    width: 100%;
+                    height: 200px;
+                }
+
+                ;
+
+                &>iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+            }
+
+            .address {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                width: 40%;
+                height: 100%;
+                padding: 2% 5%;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                &>li {
+                    display: flex;
+                    flex: 1 1 100%;
+                    font-size: 1.6em;
+                    border-bottom: 1px solid $mainColor;
+
+                    &>div {
+                        display: flex;
+
+                        &:first-child {
+                            flex: 1;
+                        }
+
+                        &:last-child {
+                            flex: 3;
+
+                            @include mobile {
+                                flex: 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .reservation {
+        // display: none;
+        position: relative;
+        width: 100%;
+        height: 660px;
+        background: $mainColor;
+        padding: 7% 0 7% 5%;
+
+        @include mobile {
+            height: auto;
+            padding: 5% 3%;
+        }
+
+        .titleArea {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            display: flex;
+            align-items: baseline;
+            color: #fff;
+
+            @include mobile {
+                position: static;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+
+            .title {
+                font-size: 2.2em;
+            }
+
+            .subTitle {
+                font-size: 1.6em;
+                margin-right: 20px;
+            }
+        }
+
+        .formArea {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            box-shadow: 1px 3px 3px -1px;
+
+            .form {
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                &__frame {
+                    width: 50%;
+                    height: 100%;
+                    padding: 15px;
+                    font-size: 1.6em;
+                    // background: #ccc;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+
+                    &__rows {
+                        position: relative;
+                        display: flex;
+                        margin-bottom: 15px;
+
+                        @include mobile {
+                            flex-direction: column;
+                            gap: 5px;
+                        }
+
+                        .label {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 40%;
+                            margin-right: 7px;
+
+                            @include mobile {
+                                width: 100%;
+                                justify-content: start;
+                            }
+
+                            .colorRed {
+                                // width: 10%;
+                                line-height: 2;
+                                font-size: 0.6rem;
+                                color: #F42424;
+
+                                @include mobile {
+                                    width: 15%;
+                                }
+                            }
+                        }
+
+
+                        .inputs {
+                            width: 45%;
+
+                            @include mobile {
+                                width: 100%;
+                                // padding-left: 30%;
+                            }
+
+                            input[type="text"],
+                            input[type="email"],
+                            input[type="tel"] {
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid #bbbbbb;
+                                border-radius: 5px;
+
+                                @include mobile {
+                                    height: 35px;
+                                }
+                            }
+
+                            input[type="radio"],
+                            input[type="checkbox"] {
+                                margin-right: 5px;
+                                border: 1px solid #bbbbbb;
+                            }
+
+                            label {
+                                margin-right: 12px;
+                            }
+
+                            &>p {
+                                font-size: 0.7rem;
+                            }
+
+                            .textarea {
+                                width: 100%;
+                                height: 112px;
+                                border: 1px solid #bbbbbb;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        .colorBlue {
+                            width: 15%;
+                            color: $mainColor;
+
+                            @include mobile {
+                                width: 100%;
+                            }
+                        }
+
+                        input[type="submit"] {
+                            position: absolute;
+                            bottom: -20px;
+                            right: 0;
+                            width: 151px;
+                            height: 48px;
+                            color: #fff;
+                            background: $mainColor;
+                            border: none;
+                            border-radius: 10px;
+                            cursor: pointer;
+
+                            @include mobile {
+                                position: static;
+                                width: 100%;
+                                height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__description {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            // width: 40%;
+            font-size: 1.4em;
+            color: #fff;
+
+            @include mobile {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .contact {
+        // display: none;
+        position: relative;
+        width: 100%;
+        height: 660px;
+        background: $mainColor;
+        padding: 7% 0;
+
+        @include mobile {
+            height: auto;
+            padding: 0;
+        }
+
+        .title {
+            position: absolute;
+            top: 5%;
+            left: 13%;
+            color: #fff;
+            font-size: 2.6em;
+
+            @include mobile {
+                position: static;
+                font-size: 1.6em;
+                padding: 10px 3%;
+            }
+        }
+
+        .formArea {
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            background: #fff;
+
+            @include mobile {
+                width: 100vw;
+                padding: 5px 0;
+            }
+
+            &>form {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                width: 100%;
+                height: 100%;
+                padding: 50px 40px 20px;
+
+                @include mobile {
+                    padding: 0 20px;
+                    gap: 33px;
+                }
+
+                .form__rows {
+                    display: flex;
+                    align-items: baseline;
+
+                    @include mobile {
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+
+                    .label {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 265px;
+                        font-size: 1.8em;
+
+                        @include mobile {
+                            justify-content: start;
+                            gap: 10px;
+                        }
+
+                        .colorRed {
+                            color: #F42424;
+                            font-size: 12px;
+                            margin-right: 6px;
+                        }
+                    }
+
+                    .inputs {
+                        width: 330px;
+                        height: 30px;
+                        border: 1px solid #bbbbbb;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
+                    &>textarea {
+                        width: 580px;
+                        height: 170px;
+                        border: 1px solid #bbbbbb;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .form-btn {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 20px;
+
+                    @include mobile {
+                        position: static;
+                    }
+
+                    &>input {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 151px;
+                        height: 48px;
+                        color: #fff;
+                        background: $mainColor;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+
+                        @include mobile {
+                            width: 100%;
+                            height: 60px;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__description {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            // width: 40%;
+            font-size: 1.4em;
+            color: #fff;
+
+            @include mobile {
+                position: static;
+                padding: 3%;
+            }
+        }
+    }
+}

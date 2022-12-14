@@ -1,0 +1,112 @@
+@use 'responsive' as *;
+
+#works {
+    margin-top: 165px;
+    width: 100%;
+
+    @include tab {
+        margin-top: 90px;
+    }
+
+    .workList {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 215px;
+        margin-top: 107px;
+
+        @include desktop-l {
+            align-items: center;
+        }
+
+        @include tab {
+            gap: 50px;
+        }
+
+        &__items {  
+            position: relative;
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 2px 6px -3px;
+
+            @include desktop-l {
+                width: 80%;
+            }
+
+            @include tab {
+                box-shadow: none;
+                width: 100%;
+            }
+
+            &>a {
+
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            &>p {
+                position: absolute;
+                bottom: -5%;
+                right: 10%;
+                display: flex;
+                flex-direction: column;
+                width: 515px;
+                background: #010D23;
+                color: #fff;
+                padding: 20px;
+                opacity: 0.4;
+                z-index: 3;
+                transform: scale(0.5);
+                transition: all 0.4s;
+                transform-origin: right bottom;
+
+                @include tab {
+                    transform: scale(1);
+                    opacity: 0.8;
+                }
+
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                // @include desktop {
+                //     width: 336px;
+                    
+                // }
+
+                &>span {
+
+                    &:nth-of-type(1) {
+                        font-size: clamp(18px,1vw, 28px);
+                    }
+                    &:nth-of-type(2) {
+                        font-size: clamp(14px, 0.7vw,18px);
+                        padding: 5px 0 15px;
+                    }
+                    &:nth-of-type(3) {
+                        font-size: clamp(16px, 0.7vw, 20px);
+                    }
+                }
+
+                @include desktop {
+                    right: 10%;
+                }
+
+                @include desktop-s {
+                    right: -5%;
+                    bottom: -5%;
+                }
+
+                @include tab {
+                    position: static;
+                    width: 100%;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

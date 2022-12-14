@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #5c5c5c;
+    font-size: 15px;
+    font-family: serif, sans-serif,Arial, Helvetica;
+}
+
+a {
+    text-decoration: none;
+    color: #5c5c5c;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ri5rfk');
+  src:  url('../fonts/icomoon.eot?ri5rfk#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ri5rfk') format('truetype'),
+    url('../fonts/icomoon.woff?ri5rfk') format('woff'),
+    url('../fonts/icomoon.svg?ri5rfk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

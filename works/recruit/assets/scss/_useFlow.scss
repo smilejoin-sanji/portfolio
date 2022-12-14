@@ -1,0 +1,250 @@
+.useFlow {
+
+    &__title {
+
+        .title {
+            font-size: 37px;
+
+            @include mb {
+                font-size: 22px;
+            }
+
+            img {
+                width: 235px;
+                margin-left: -235px;
+                margin-bottom: -24px;
+
+                @include mb {
+                    width: 143px;
+                    margin-left: -143px;
+                    margin-bottom: -13px;
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        height: 445px;
+        position: relative;
+        background: url(../images/useFlow_bg_img.png) no-repeat;
+
+        @include mb {
+            display: block;
+            height: 710px;
+            background: none;
+        }
+
+        &__items {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 370px;
+            text-align: center;
+            background: #fff;
+
+            @include mb {
+                width: 330px;
+                height: 160px;
+                margin: 0 24px;
+                border-radius: 15px;
+                box-shadow: 0 2px 4px 0.1px rgba(0, 0, 0, 0.3);
+            }
+
+            &__step {
+                margin: 40px 0;
+                text-align: left;
+                font-size: 35px;
+                color: rgba(118, 117, 117, .8);
+
+                @include mb {
+                    font-size: 16px;
+                    margin: 10px 0 0 10px;
+                }
+            }
+
+            &__num {
+                color: rgba(18, 118, 234, .8);
+                font-size: 100px;
+                font-weight: 700;
+                line-height: 70px;
+
+                @include mb {
+                    position: absolute;
+                    top: 10px;
+                    left: 60px;
+                    color: rgba(118, 117, 117, .8);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: left;
+                }
+            }
+
+            &__title {
+                display: block;
+                height: 35px;
+                line-height: 40px;
+                margin: 30px auto 20px;
+                font-size: 20px;
+                color: #fff;
+                background-color: $colorRed;
+                border-radius: 20px;
+
+                @include mb {
+                    font-size: 25px;
+                    background-color: transparent;
+                    color: #414141;
+                    margin: 5px auto 10px;
+                }
+            }
+
+            &__text {
+                position: relative;
+                text-align: left;
+                line-height: 25px;
+                padding: 0 10px;
+
+                @include mb {
+                    font-size: 16px;
+
+                    &::before {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        display: block;
+                        width: 0;
+                        content: "";
+                        border-bottom: 7px solid $textBgColor;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        display: block;
+                        width: 0px;
+                        content: "";
+                        border-bottom: 7px solid $textBgColor;
+                    }
+                }
+            }
+        }
+
+        .items1 {
+
+            &__title {
+                width: 50%;
+            }
+
+            &__text {
+
+                @include mb {
+                    &::before {
+                        top: 12px;
+                        left: 73px;
+                        width: 98px;
+                    }
+
+                    &::after {
+                        top: 40px;
+                        left: 106px;
+                        width: 189px;
+                    }
+                }
+            }
+        }
+
+        .items2 {
+            top: 100px;
+            left: 314px;
+
+            @include mb {
+                top: 180px;
+                left: 0;
+            }
+
+            &__title {
+                width: 50%;
+            }
+
+            &__text {
+                @include mb {
+                    &::before {
+                        top: 12px;
+                        left: 8px;
+                        width: 129px;
+                    }
+
+                    &::after {
+                        top: 40px;
+                        left: 25px;
+                        width: 113px;
+                    }
+                }
+            }
+        }
+
+        .items3 {
+            top: 37px;
+            left: 619px;
+
+            @include mb {
+                top: 360px;
+                left: 0;
+            }
+
+            &__title {
+                width: 80%;
+            }
+
+
+            &__text {
+                @include mb {
+                    &::before {
+                        top: 12px;
+                        left: 8px;
+                        width: 82px;
+                    }
+
+                    &::after {
+                        top: 40px;
+                        left: 165px;
+                        width: 115px;
+                    }
+                }
+            }
+        }
+
+        .items4 {
+            top: 90px;
+            left: 930px;
+
+            @include mb {
+                top: 540px;
+                left: 0;
+            }
+
+            &__title {
+                width: 93%;
+            }
+
+            &__text {
+                @include mb {
+                    &::before {
+                        top: 40px;
+                        left: 9px;
+                        width: 255px;
+                    }
+
+                    &::after {
+                        top: 65px;
+                        left: 25px;
+                        width: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

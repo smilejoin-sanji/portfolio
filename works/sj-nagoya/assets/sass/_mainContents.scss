@@ -1,0 +1,410 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.main {
+    width: calc(100vw - 130px);
+    // height: 100vh;
+    // margin-top: 50px;
+
+    @include mobile {
+        width: 100vw;
+    }
+
+    &__nav {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background: $mainColor;
+
+        @include mobile {
+            overflow-x: scroll;
+        }
+
+        &__items {
+            flex: 1;
+            height: 100%;
+
+            @include mobile {
+                flex: 1 0 30%;
+                flex-wrap: wrap;
+
+                &:last-child {
+                    overflow-y: auto;
+                }
+            }
+
+            &:hover {
+                background: #fff;
+            }
+
+            &:hover a {
+                color: $mainColor;
+                font-size: 3em;
+
+                @include mobile {
+                    font-size: 1.8em;
+                }
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                font-size: 2.4em;
+                color: #fff;
+                transition: all 0.6s;
+
+                @include mobile {
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+
+    &__contents {
+        width: 100%;
+
+        @include mobile {
+            height: auto;
+        }
+
+        &__items {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+
+            .contentArea {
+                width: 1140px;
+                height: 100%;
+                // background: #000;
+                margin: 0 auto;
+                padding: 50px 40px 15px;
+
+                @include mobile {
+                    width: 100%;
+                    height: auto;
+                    padding: 50px 15px;
+                }
+
+                &__top {
+                    display: flex;
+                    width: 100%;
+                    height: 420px;
+
+                    @include mobile {
+                        flex-direction: column-reverse;
+                        height: 100%;
+                    }
+
+                    .copyright {
+                        width: 50%;
+                        height: 100%;
+                        background: #C7E5FF;
+                        border-radius: 15px;
+                        padding: 30px;
+
+                        @include mobile {
+                            width: 100%;
+                            height: 50%;
+                            padding: 15px;
+                        }
+
+                        &__title {
+                            font-size: 2.2em;
+                            font-weight: 400;
+                            margin-bottom: 17px;
+
+                            @include mobile {
+                                font-size: 1.6em;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        &__subTitle {
+                            display: inline-block;
+                            font-size: 1.8em;
+                            line-height: 2em;
+                            border-bottom: 2px solid #3977AD;
+
+                            @include mobile {
+                                font-size: 1.4em;
+                            }
+                        }
+
+                        &__description {
+                            width: 100%;
+                            max-height: 65%;
+                            background: #fff;
+                            border-radius: 15px;
+                            margin-top: 18px;
+                            padding: 10px 20px;
+
+                            @include mobile {
+                                margin-top: 10px;
+                            }
+
+                            &__items {
+                                font-size: clamp(1.4em, 1.5vw, 1.8em);
+                                list-style-type: initial;
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+
+                    .img {
+                        width: 50%;
+                        height: 100%;
+                        background: url(../images/lady.png) no-repeat;
+                        background-size: cover;
+                        // background-position: center center; 
+
+                        @include mobile {
+                            width: 100%;
+                            height: 270px;
+                        }
+                    }
+                }
+
+                &__bottom {
+                    display: flex;
+                    width: 100%;
+                    height: 420px;
+
+                    @include mobile {
+                        flex-direction: column;
+                        height: 100%;
+                    }
+
+                    .img {
+                        width: 50%;
+                        height: 100%;
+                        background: url(../images/men.png) no-repeat;
+                        background-size: cover;
+                        background-position: center center;
+
+                        @include mobile {
+                            width: 100%;
+                            height: 270px;
+                        }
+                    }
+
+                    .copyright {
+                        width: 50%;
+                        height: 100%;
+                        background: #C7E5FF;
+                        border-radius: 15px;
+                        padding: 28px 30px;
+
+                        @include mobile {
+                            width: 100%;
+                            // height: 50%;
+                            padding: 15px;
+                        }
+
+                        &__description {
+                            width: 100%;
+                            height: 60%;
+                            background: #fff;
+                            border-radius: 15px;
+                            margin: 18px 0 23px;
+                            padding: 10px 20px;
+
+                            @include mobile {
+                                height: auto;
+                                margin: 0 0 15px;
+                            }
+
+                            &__items {
+                                list-style-type: initial;
+                                font-size: clamp(1.4em, 1.5vw, 1.8em);
+                                margin-left: 15px;
+                            }
+                        }
+
+                        &>p {
+                            display: inline-block;
+                            font-size: 3.5em;
+                            border-bottom: 1px solid $mainColor;
+                            margin-left: 15px;
+
+                            @include mobile {
+                                font-size: 1.8em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .more {
+                position: relative;
+                font-size: 2.6em;
+                margin-left: auto;
+                margin-right: 100px;
+
+                @include mobile {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80vw;
+                    height: 50px;
+                    margin: 0 auto;
+                    border: 1px solid $mainColor;
+                    border-radius: 20px;
+                    font-size: 1.8em;
+
+                    a {
+                        color: $mainColor;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10%;
+                    right: -30%;
+                    width: 70%;
+                    height: 30%;
+                    // background: #000;
+                    border-right: 2px solid #000;
+                    border-bottom: 1px solid #000;
+                    transform: skew(60deg);
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+            }
+
+            .reviewArea {
+                width: 100%;
+                margin-top: 27px;
+
+                .review {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 50px;
+                    font-size: 2em;
+                    background: $mainColor;
+
+                    &__left {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        padding: 0 55px;
+                        color: $mainColor;
+                        background: #fff;
+
+                        @include mobile {
+                            flex: 1;
+                            justify-content: center;
+                            padding: 0;
+                        }
+                    }
+
+                    &__right {
+                        display: inline-block;
+                        margin: 0 32px 0 auto;
+                        border-bottom: 1px solid #fff;
+                        
+
+                        @include mobile {
+                            display: flex;
+                            justify-content: center;
+                            flex: 2;
+                            font-size: 0.7rem;
+                            margin: 0;
+                        }
+
+                        &>a {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .details {
+                    display: flex;
+                    gap: 10px;
+                    width: 1450px;
+                    height: 430px;
+                    margin: 50px auto;
+                    background: #fff;
+
+                    @include mobile {
+                        flex-direction: column;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    &__img {
+                        width: 50%;
+                        height: 100%;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+
+                        img {
+                            // width: 100%;
+                            height: 100%;
+
+                            @include mobile {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    &__textArea {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        width: 50%;
+                        height: 100%;
+                        padding-top: 15px;
+
+                        @include mobile {
+                            width: 100%;
+                            padding: 10px;
+                            gap: 25px;
+                        }
+
+                        .title {
+                            font-size: 3.5em;
+
+                            @include mobile {
+                                font-size: 1.8em;
+                            }
+                        }
+
+                        &>p {
+                            font-size: 1.8em;
+
+                            @include mobile {
+                                font-size: 1.6em;
+                            }
+                        }
+
+                        .user {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            font-size: 2em;
+                            color: #9F9F9F;
+
+                            @include mobile {
+                                position: static;
+                                margin-left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

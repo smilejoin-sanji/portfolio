@@ -1,0 +1,70 @@
+@use 'responsive' as *;
+
+@use 'header';
+@use 'service';
+@use 'works';
+@use 'contact';
+@use 'about';
+@use 'footer';
+
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Vujahday+Script&family=Yuji+Mai&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+.bg-img {
+    position: fixed;
+    top: -220px;
+    width: 100vw;
+    // min-height: 1200px;
+    max-height: 1920px;
+    height: 1600px;
+    background: url(../images/fixd-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -9999;
+
+    @include tab {
+        top: 100px;
+        height: 1040px;
+    }
+
+    @include tab-s {
+        top: 0;
+        height: 780px;
+    }
+}
+
+
+.wrap {
+
+    max-width: 80vw;
+    margin: 0 auto;
+
+    @include desktop-s {
+        max-width: 85vw;
+    }
+}
+
+.sc-title {
+    font-style: italic;
+    font-weight: 700;
+    color: #010D23;
+    font-size: clamp(50px, 2.7vw, 70px);
+    text-align: center;
+
+    @include sp {
+
+        font-size: clamp(32px, 10vw, 50px);
+    }
+}
+
+
+.test {
+    height: 1000px;
+}

@@ -1,0 +1,105 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100vw - 130px);
+    height: auto;
+    border-top: 1px solid #E8E8E8;
+    padding: 15px 50px;
+    // background: $mainColor;
+
+    @include mobile {
+        width: 100vw;
+
+        flex-direction: column;
+        padding: 10px 30px;
+    }
+
+    &__logoArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        // background: $mainColor;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &>.logo {
+            width: 65%;
+            height: 140px;
+
+            @include mobile {
+                width: 100%;
+                height: 80px;
+            }
+
+            &>a {
+                display: flex;
+                align-items: center;
+                gap: 5%;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    height: 70%;
+
+                    @include mobile {
+                        height: 50%;
+                    }
+                }
+
+                .title {
+                    font-size: 4.4em;
+                    color: #000198;
+                    font-weight: 700;
+
+                    @include mobile {
+                        font-size: 2.2em;
+                    }
+                }
+            }
+        }
+
+        &>.access {
+            font-size: 2.2em;
+            margin-top: 30px;
+
+            @include mobile {
+                font-size: 1.6em;
+                margin: 15px 0;
+            }
+        }
+    }
+
+    &__map {
+        width: 50%;
+        height: 394px;
+
+        @include mobile {
+            width: 100%;
+            height: 180px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 44px;
+        border-top: 2px solid #E8E8E8;
+        margin-top: 15px;
+        font-size: 1.2em;
+    }
+}

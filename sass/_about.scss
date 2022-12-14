@@ -1,0 +1,306 @@
+@use 'responsive' as *;
+
+#about {
+
+    padding: 165px 0 68px;
+    background: #fff;
+    overflow: hidden;
+
+    @include tab-s {
+        padding: 165px 0 0;
+    }
+
+    &::before {
+        position: absolute; 
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 60%;
+        height: 1541px;
+        background: url(../images/about-bg-img.png) no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include desktop-l {
+            height: 1310px;
+        }
+
+        @include tab-s {
+            width: 100%;
+            height: 1700px;
+        }
+    }
+
+    &>.sc-title {
+
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: -130px;
+            left: 50%;
+            width: 254px;
+            height: 295px;
+            content: '';
+            background: url(../images/bird.png) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transform: rotate(335deg);
+
+            @include desktop-l {
+                top: -140px;
+                width: 224px;
+                height: 265px;
+            }
+
+            @include sp {
+
+                width: 184px;
+                height: 225px;
+            }
+        }
+    }
+
+    .wrap {
+        display: flex;
+        gap: 10%;
+        margin-top: 178px;
+
+        @include desktop {
+            max-width: 90vw;
+            gap: 5%;
+        }
+
+        @include tab {
+            gap: 15px;
+        }
+
+        @include tab-s {
+            flex-direction: column;
+            margin-top: 90px;
+        }
+
+        @include sp {
+            gap: 30px;
+        }
+
+        &>article {
+            width: 45%;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 64px;
+
+            @include tab {
+                width: 40%;
+            }
+
+            @include tab-s {
+                width: 100%;
+            }
+
+            &__avatar {
+                position: relative;
+                width: 400px;
+                height: 400px;
+
+                @include desktop-s {
+                    width: 350px;
+                    height: 350px;
+                }
+
+                @include tab {
+                    width: 270px;
+                    height: 270px;
+                }
+
+                @include sp {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url(../images/about-avatar-bg.png)no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 18%;
+                    left: 18%;
+                    width: 65%;
+                    height: 65%;
+                    background: url(../images/sanji.png)no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
+
+                
+            }
+
+            &__avatarData {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                &__items {
+                    display: flex;
+                    border-bottom: 1px dotted #010D23;
+                    padding-bottom: 7px;
+                    
+                    .data-title {
+                        flex: 1.5;
+                        display: block;
+                        letter-spacing: 0.3rem;
+                    }
+                    .data-details {
+                        flex: 2.5;
+
+                        display: flex;
+                        flex-direction: column;
+
+                        &>i {
+                            font-size: 12px;
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .career {
+            position: relative;
+            padding-bottom: 561px;
+
+            @include desktop-l {
+                padding-bottom: 441px;
+            }
+
+            @include desktop {
+                padding-bottom: 315px;
+            }
+
+            @include desktop-s {
+                width: 50%;
+            }
+
+            @include tab {
+                width: 60%;
+            }
+
+            @include tab-s {
+                width: 100%;
+                padding-bottom: 165px;
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                height: 400px;
+                overflow-y: scroll;
+                background: rgba(1, 13, 35, .4);
+                border-radius: 15px;
+                color: #fff;
+                padding: 50px 50px 0;
+                transition: all 0.7s;
+
+                @include desktop-s {
+                    padding: 40px 40px 0;
+
+                }
+                @include tab {
+                    padding: 20px 10px 0;
+
+                }
+
+                @include tab-s {
+                    padding: 20px 20px 0;
+                    background: rgba(1, 13, 35, .9);
+
+                }
+
+                &::before {
+                    position: absolute; 
+                    bottom: 0;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 240px;
+                    background: url(../images/about-right-img.png) no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+
+                    @include desktop {
+                        height: 190px;
+                    }
+                    @include desktop-s {
+                        height: 142px;
+                    }
+                }
+            
+
+                &:hover {
+                    gap: 30px;
+                    background: rgba(1, 13, 35, .9);
+
+                    .detail__notes {
+                        display: block;
+                    }
+                }
+
+                &__rows {
+                    display: flex;
+
+
+                    @include tab {
+                        gap: 15px;
+                    }
+                    .date {
+                        flex: 1;
+
+                        &>span {
+                            display: block;
+
+                            &:first-child {
+                                font-size: 20px;
+
+                                @include sp {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                    .detail {
+                        flex: 3;
+                        font-size: 20px;
+
+                        &__title {
+                            display: block;
+                            font-size: 20px;
+
+                            @include sp {
+                                font-size: 17px;
+                            }
+                        }
+
+                        &__notes {
+                            display: none;
+                            font-size: 14px;
+                            padding-left: 1rem
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

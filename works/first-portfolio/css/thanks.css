@@ -1,0 +1,34 @@
+#contact .main__contents__contact .thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 769px) {
+  #contact .main__contents__contact .thanks {
+    flex-direction: column-reverse;
+  }
+}
+#contact .main__contents__contact .thanks__message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 200px;
+  font-size: 2.4em;
+}
+@media screen and (max-width: 769px) {
+  #contact .main__contents__contact .thanks__message {
+    font-size: 1.6em;
+  }
+}
+#contact .main__contents__contact .thanks__img {
+  width: 200px;
+  height: 200px;
+}
+#contact .main__contents__contact .thanks__img img {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=thanks.css.map */

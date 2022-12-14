@@ -1,0 +1,81 @@
+#contact .main__contents__contact .contactNotes {
+  font-size: 2em;
+  font-weight: 700;
+}
+@media screen and (max-width: 769px) {
+  #contact .main__contents__contact .contactNotes {
+    font-size: 1.6em;
+  }
+}
+#contact .main__contents__contact .formArea .contactForm__input__items:last-child .inputArea {
+  height: auto;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  width: 16%;
+  height: 100%;
+}
+@media screen and (max-width: 769px) {
+  #contact .main__contents__contact .formArea .contactForm__sendArea {
+    height: auto;
+  }
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .send {
+  width: 100%;
+  height: 70%;
+  border-radius: 15px;
+  background: url(../images/btn.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .send:hover {
+  transform: scale(1.04);
+  background: #373737;
+  font-size: 2em;
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .send:hover .submit {
+  color: #fff;
+  opacity: 1;
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .send .submit {
+  width: 100%;
+  height: 100%;
+  color: #373737;
+  background: #373737;
+  font-size: 1.6em;
+  letter-spacing: 0.1em;
+  font-family: "Bangers", cursive;
+  transition: all 0.4s;
+  opacity: 0;
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .back {
+  width: 100%;
+  height: 25%;
+  background: rgb(164, 164, 164);
+  border-radius: 15px;
+  font-size: 1.6em;
+  letter-spacing: 0.1em;
+  font-family: "Bangers", cursive;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .back:hover {
+  transform: scale(1.04);
+}
+#contact .main__contents__contact .formArea .contactForm__sendArea .back > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+/*# sourceMappingURL=confirm.css.map */

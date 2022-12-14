@@ -1,0 +1,50 @@
+@use 'responsive' as *;
+
+#footer {
+    width: 100%;
+    &>p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        color: #fff;
+        background: #010D23;
+        font-size: 12px;
+        font-style: italic;
+
+        &>span {
+            position: absolute;
+            top: -20px;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            @include tab-s {
+                top: -30px;
+                height: 70px;
+            }
+
+            &>a {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                border-radius: 50%;
+                height: 100%;
+                background: #010D23;
+                transition: transform 0.4s;
+                color: #fff;
+    
+                &:hover {
+                    transform: scale(1.3);
+                    font-weight: 700;
+    
+                }
+            }
+        }
+    }
+}

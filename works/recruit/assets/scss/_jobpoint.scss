@@ -1,0 +1,91 @@
+.job__point {
+
+    &__title {
+
+        img {
+            width: 330px;
+            margin-left: -327px;
+            margin-bottom: -33px;
+
+            @include mb {
+                width: 170px;
+                margin-left: -165px;
+                margin-bottom: -21px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mb {
+            flex-wrap: nowrap;
+            overflow: auto;
+        }
+
+        &__items {
+            display: flex;
+            width: 600px;
+            height: 170px;
+            padding: 0 10px;
+            margin-bottom: 20px;
+
+            @include mb {
+                position: relative;
+                width: 390px;
+                height: 230px;
+                padding: 0;
+                margin-right: 25px;
+            }
+
+            &:nth-child(4) {
+                margin-right: 0;
+            }
+
+            img {
+                width: 245px;
+                height: 170px;
+
+                @include mb {
+                    width: 375px;
+                    height: 230px;
+                }
+            }
+            &__textArea {
+                width: 330px;
+                height: 170px;
+                padding-left: 20px;
+
+                @include mb {
+                    height: 200px;
+                    position: absolute;
+                    top: 16px;
+                    left: 22px;
+                    background: rgba(255, 255, 255, .8);
+                    border-radius: 16px;
+                    text-align: center;
+                    padding: 0 10px;
+                }
+
+                &__title {
+                    padding-bottom: 27px;
+                    font-weight: 700;
+
+                    @include mb {
+                        padding: 20px 0;
+                        font-size: 17px;
+                    }
+                }
+
+                &__text {
+                    line-height: 25px;
+
+                    @include mb {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

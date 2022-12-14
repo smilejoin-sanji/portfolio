@@ -1,0 +1,221 @@
+﻿/*body {
+	background-color: #192735;
+}*/
+
+header {
+display: flex;
+	height: 50px;
+	margin-top: 15px;
+}
+
+.center {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+.logo {
+	font-size: 40px;
+}
+/*.center .nav {
+	float: left;
+	justify-content: end;
+}*/
+.nav {
+	position: relative;
+}
+
+.nav ul {
+	position: absolute;
+	top: -50px;
+	right: 60px;
+	display: flex;
+	line-height: 40px;
+}
+
+.nav ul li {
+	font-size: 25px;
+	padding: 0 25px;
+}
+
+.nav a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.nav .inst,
+.nav .twis {
+	position: absolute;
+	top: 6px;
+	right: -50px;
+	width: 25px;
+	height: 25px;
+	background: url(images/inst.png) no-repeat;
+	transform: scale(0.8);
+	background-size: 25px 25px;
+	/*border-radius: 15px;
+	margin-top: 20px;*/
+}
+
+.nav .inst a,
+.nav .twis a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.nav .twis {
+	top: 6px;
+	right: -80px;
+	background: url(images/twit.png) no-repeat;
+	background-size: 25px 25px;
+	margin-left: 5px;
+	transform: scale(0.8);
+}
+
+.nav ul li:hover a{
+	color: #696969;
+}
+
+.nav ul li:hover {
+	border-bottom: 2px solid #696969;
+}
+
+.nav ul li:hover inst {
+	border: 0;
+}
+
+/* header end */
+
+.top_file {
+	height: 500px;
+	background: url("images/top.jpg") no-repeat 0px -100px;
+	background-size: 100%;
+	margin-top: 20px;
+}
+.top_file_txt {
+	color: #F9A825;
+	font-size: 65px;
+	line-height: 85px;
+	font-weight: 900;
+	padding: 65px 0 0 166px;
+}
+
+.vlog {
+	width: 600px;
+	margin: 50px auto;
+}
+
+.vlog_top table tr th {
+	font-size: 25px;
+}
+.vlog_top table tr td {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #888;
+}
+.vlog_top table tr td:hover a {
+	font-weight: 700;
+	color: #696969;
+}
+
+
+.about h1 {
+	font-size: 25px;
+	text-align: center;
+	margin:50px auto 20px;
+}
+
+.about .about_img {
+	float: left;
+	width: 198px;
+	height: 298px;
+ 	background: url(images/profile.jpg) no-repeat center/100%; 
+	border-radius: 15px 0 0 15px;
+}
+
+.about table {
+	float: left;
+	margin-left: 20px;
+	height:300px;
+	color: #696969;
+}
+
+.about table tr td {
+	padding: 0 15px;
+}
+
+.about_box {
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	border: 1px dotted #696969;
+	border-radius: 15px;
+}
+
+.motovlog {
+	margin-top: 50px;
+}
+
+.center .box {
+	display: flex;
+	flex-wrap:wrap;
+	padding: 0;
+}
+
+.motovlog h3 {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.motovlog .center .item {
+	overflow: hidden;
+	width: 20%;
+	margin: 15px 30px;
+	border-radius: 15px;
+	box-shadow: 0px 1px 6px 1px;
+}
+.item img {
+	width: 100%;
+	transform: scale(1.3);
+}
+.motovlog .center .item a {
+	position: relative;
+	display: block;
+}
+
+.item a:hover img{
+	transform: scale(1.4);
+	transition: all 0.4s;
+}
+
+
+.item a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	color: #ccc;
+	content:"\e912";
+	font-family: 'icomoon';
+	text-align: center;
+	line-height: 180px;
+	font-size: 35px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+}
+
+.item a:hover::after {
+	display: block;
+}
+
+.footer {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-top: 2px solid #ccc;
+	margin-top: 30px;
+}

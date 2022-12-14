@@ -1,0 +1,83 @@
+.message {
+
+    &__title {
+
+        .title {
+            font-size: 37px;
+
+            @include mb {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            width: 383px;
+            margin-left: -383px;
+            margin-bottom: -40px;
+
+            @include mb {
+                width: 164px;
+                margin-left: -158px;
+                margin-bottom: -16px;
+            }
+        }
+    }
+
+    &__textArea {
+        display: flex;
+        padding: 0 100px;
+
+        @include mb {
+            display: block;
+            padding: 0;
+        }
+
+        &__text {
+            width: 780px;
+            height: 480px;
+            line-height: 25px;
+
+            @include mb {
+                width: 375px;
+                height: 600px;
+                line-height: 20px;
+                padding: 0 15px;
+                font-size: 12px;
+            }
+        }
+
+        &__img {
+            width: 230px;
+            height: 560px;
+            margin-top: -80px;
+            margin-left: -10px;
+
+            @include mb {
+                display: none;
+            }
+        }
+    }
+
+    &__sign {
+        text-align: right;
+        padding-right: 220px;
+        margin-top: 40px;
+
+        @include mb {
+            padding-right: 20px;
+            margin-top: 0;
+        }
+
+        &__bottom {
+            font-size: 22px;
+
+            @include mb {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .btn {
+        margin-bottom: 50px;
+    }
+}

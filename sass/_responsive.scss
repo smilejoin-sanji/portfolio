@@ -1,0 +1,41 @@
+@function get_vw($size, $viewport:320){
+    $rate: 100 / $viewport;
+    @return $rate * $size * 1vw;
+}
+  
+@mixin font($font_size:10){
+    font-size: $font_size * 1px;
+    font-size: get_vw($font_size);
+}
+
+
+@mixin desktop-l {
+    @media screen and (max-width: 1690px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (max-width: 1570px) {
+        @content;
+    }
+}
+@mixin desktop-s {
+    @media screen and (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (max-width: 825px) {
+        @content;
+    }
+}
+@mixin tab-s {
+    @media screen and (max-width: 659px) {
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width: 470px) {
+        @content;
+    }
+}

@@ -1,0 +1,278 @@
+@use 'responsive' as *;
+
+#service {
+
+    padding-top: 165px;
+
+    @include tab {
+        padding-top: 90px;
+    }
+
+    .serviceList {
+        display: flex;
+        justify-content: space-around;
+        // gap: 13.5%;
+        margin-top: 296px;
+
+        @include tab {
+            flex-direction: column;
+            margin-top: 156px;
+        }
+
+        &__items {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            // width: 20%;
+            width: 23%;
+            background: #010D23;
+            padding: 120px 0 15px;
+            box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 30%);
+
+            @include desktop-l {
+                width: 30%;
+            }
+
+            @include desktop {
+                width: 30%;
+            }
+
+            @include tab {
+                width: 60%;
+                margin: 0 0 20px 40%;
+            }
+
+            @include sp {
+
+                width: 100%;
+                margin: 0 0 20px 5%;
+            }
+            
+            &>span {
+                display: flex;
+                color: #fff;
+
+                &:first-child {
+                    position: absolute;
+                    top: 75px;
+                    font-size: clamp(16px,1.3vw, 20px);
+                    padding-left: 25%;
+
+                }
+
+                &:last-child {
+                    width: 83%;
+                    font-size: clamp(18px,0.8vw, 28px);
+                }
+            }
+
+            &:nth-child(1) {
+
+                &::after {
+                    position: absolute;
+                    top: -190px;
+                    left: -130px;
+                    content: '';
+                    width: 386px;
+                    height: 256px;
+                    background: url(../images/derction.png)no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    z-index: -1;
+
+                    @include desktop {
+                        width: 336px;
+                        height: 206px;
+                        top: -160px;
+                        left: -110px;
+                    }
+
+                    @include desktop-s {
+
+                        width: 256px;
+                        height: 166px;
+                        top: -130px;
+                        left: -90px;
+                    }
+
+                    @include tab {
+                        width: 376px;
+                        height: 246px;
+                        top: -100px;
+                        left: -260px;
+                    }
+
+                }
+
+                span {
+
+                    &:first-child {
+
+                        &::after {
+                            position: absolute;
+                            top: -55px;
+                            left: 50%;
+                            content: 'Description';
+                            font-size: clamp(20px, 2vw, 42px);
+                            font-style: italic;
+                            font-weight: 700;
+                            transform: translate(-50%, 0);
+                            
+
+                            @include desktop {
+                                top: -55px;
+                                font-size: clamp(20px, 3vw, 42px);
+                            }
+
+                            @include tab {
+                                top: -50px;
+                                font-size: clamp(20px, 5vw, 37px);
+                            }
+                            @include sp {
+                                top: -45px;
+                                font-size: clamp(20px, 10vw, 30px);
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+
+                &::after {
+                    position: absolute;
+                    top: -190px;
+                    left: -130px;
+                    content: '';
+                    width: 386px;
+                    height: 256px;
+                    background: url(../images/design.png)no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    z-index: -1;
+
+                    @include desktop {
+                        width: 336px;
+                        height: 206px;
+                        top: -160px;
+                        left: -110px;
+                    }
+                    @include desktop-s {
+
+                        width: 256px;
+                        height: 166px;
+                        top: -130px;
+                        left: -90px;
+                    }
+                    @include tab {
+
+                        width: 376px;
+                        height: 246px;
+                        top: -100px;
+                        left: -260px;
+                    }
+
+                }
+
+                span {
+
+                    &:first-child {
+
+                        &::after {
+                            position: absolute;
+                            top: -55px;
+                            left: 50%;
+                            content: 'Design';
+                            font-size:  clamp(20px, 2vw, 42px);
+                            font-style: italic;
+                            font-weight: 700;
+                            transform: translate(-50%, 0);
+
+                            @include desktop {
+                                top: -55px;
+                                font-size: clamp(20px, 3vw, 42px);
+                            }
+
+                            @include tab {
+                                top: -50px;
+                                font-size: clamp(20px, 5vw, 37px);
+                            }
+                            @include sp {
+                                top: -45px;
+                                font-size: clamp(20px, 10vw, 30px);
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+
+                &::after {
+                    position: absolute;
+                    top: -190px;
+                    left: -130px;
+                    content: '';
+                    width: 386px;
+                    height: 256px;
+                    background: url(../images/coding.png)no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    z-index: -1;
+
+                    @include desktop {
+                        width: 336px;
+                        height: 206px;
+                        top: -160px;
+                        left: -110px;
+                    }
+                    @include desktop-s {
+
+                        width: 256px;
+                        height: 166px;
+                        top: -130px;
+                        left: -90px;
+                    }
+                    @include tab {
+
+                        width: 376px;
+                        height: 246px;
+                        top: -100px;
+                        left: -260px;
+                    }
+
+                }
+
+                span {
+
+                    &:first-child {
+
+                        &::after {
+                            position: absolute;
+                            top: -55px;
+                            left: 50%;
+                            content: 'Coding';
+                            font-size:  clamp(20px, 2vw, 42px);
+                            font-style: italic;
+                            font-weight: 700;
+                            transform: translate(-50%, 0);
+
+                            @include desktop {
+                                top: -55px;
+                                font-size: clamp(20px, 3vw, 42px);
+                            }
+
+                            @include tab {
+                                top: -50px;
+                                font-size: clamp(20px, 5vw, 37px);
+                            }
+
+                            @include sp {
+                                top: -45px;
+                                font-size: clamp(20px, 10vw, 30px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
