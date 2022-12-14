@@ -60,9 +60,11 @@
     }
 
     .wrap {
+        position: relative;
         display: flex;
         gap: 10%;
         margin-top: 178px;
+        z-index: 2;
 
         @include desktop {
             max-width: 90vw;
@@ -100,11 +102,16 @@
                 width: 100%;
             }
 
+            @include sp {
+                gap: 0;
+            }
+
             &__avatar {
                 position: relative;
                 width: 400px;
                 height: 400px;
                 transition: all 0.4s;
+                z-index: 2;
 
                 @include desktop-s {
                     transform: scale(0.9);
@@ -112,11 +119,6 @@
 
                 @include tab {
                     transform: scale(0.7);
-
-                }
-
-                @include sp {
-                    transform: scale(1);
 
                 }
 
@@ -203,11 +205,11 @@
             &__list {
                 display: flex;
                 flex-direction: column;
-                gap: 50px;
+                gap: 70px;
                 // height: 400px;
                 height: 640px;
                 overflow-y: scroll;
-                background: rgba(1, 13, 35, .4);
+                background: rgba(1, 13, 35, .9);
                 border-radius: 15px;
                 color: #fff;
                 padding: 50px 50px 0;
@@ -225,7 +227,8 @@
                 @include tab-s {
                     height: 420px;
                     padding: 20px 20px 0;
-                    background: rgba(1, 13, 35, .9);
+                    background: rgb(1, 13, 35);
+
 
                 }
 
@@ -251,7 +254,7 @@
 
                 &:hover {
                     gap: 30px;
-                    background: rgba(1, 13, 35, .9);
+                    background: rgb(1, 13, 35);
 
                     .detail__notes {
                         display: block;

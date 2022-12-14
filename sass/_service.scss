@@ -9,10 +9,12 @@
     }
 
     .serviceList {
+        position: relative;
         display: flex;
         justify-content: space-around;
         // gap: 13.5%;
         margin-top: 296px;
+        z-index: 2;
 
         @include tab {
             flex-direction: column;
