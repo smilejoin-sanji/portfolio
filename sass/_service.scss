@@ -64,7 +64,11 @@
 
                 &:last-child {
                     width: 83%;
-                    font-size: clamp(18px,0.8vw, 28px);
+                    font-size: clamp(18px, 1vw, 24px);
+
+                    @include desktop-l {
+                        font-size: 16px;
+                    }
                 }
             }
 
