@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 $error = [];
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $post = $_SESSION['form'];
     }
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -304,8 +304,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="contactForm__input__items">
                                     <label class="label" for="input-companyName">貴社名</label>
                                     <div class="inputArea">
-                                        <input class="inputs" type="text" name="companyName" id="input-companyName"
-                                            value="<?php echo htmlspecialchars($post['companyName']); ?>">
+                                        <input class="inputs" type="text" name="companyName" id="input-companyName">
+                                        <!-- <input class="inputs" type="text" name="companyName" id="input-companyName"
+                                            value="<?php echo htmlspecialchars($post['companyName']); ?>"> -->
                                     </div>
                                 </div>
                                 <div class="contactForm__input__items">
@@ -313,10 +314,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             class="colorRed">*必須</span></label>
                                     <div class=inputArea>
                                         <input class="inputs" type="text" name="userName" id="input-userName"
-                                            value="<?php echo htmlspecialchars($post['userName']); ?>" required>
-                                        <?php if ($error['userName'] === 'blank'): ?>
+                                             required>
+                                        <!-- <input class="inputs" type="text" name="userName" id="input-userName"
+                                            value="<?php echo htmlspecialchars($post['userName']); ?>" required> -->
+                                        <!-- <?php if ($error['userName'] === 'blank'): ?>
                                             <p class="error_msg">＊お名前をご記入下さい。</p>
-                                        <?php endif; ?>
+                                        <?php endif; ?> -->
                                     </div>
                                 </div>
                                 <div class="contactForm__input__items">
@@ -324,20 +327,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             class="colorRed">*必須</span></label>
                                     <div class="inputArea">
                                         <input class="inputs" type="email" name="email" id="input-email"
-                                            value="<?php echo htmlspecialchars($post['email']); ?>" required>
-                                        <?php if ($error['email'] === 'blank'): ?>
+                                             required>
+                                        <!-- <input class="inputs" type="email" name="email" id="input-email"
+                                            value="<?php echo htmlspecialchars($post['email']); ?>" required> -->
+                                        <!-- <?php if ($error['email'] === 'blank'): ?>
                                         <p class="error_msg">＊メールアドレスをご記入下さい。</p>
                                         <?php endif; ?>
                                         <?php if ($error['email'] === 'email'): ?>
                                         <p class="error_msg">＊メールアドレスを正しくご記入ください。</p>
-                                        <?php endif; ?>
+                                        <?php endif; ?> -->
                                     </div>
                                 </div>
                                 <div class="contactForm__input__items">
                                     <label class="label" for="input-tel">電話番号</label>
                                     <div class="inputArea">
                                         <input class="inputs" type="tel" size="10" maxlength="20" name="tel" id="input-tel"
-                                            value="<?php echo htmlspecialchars($post['tel']); ?>">
+                                            >
+                                        <!-- <input class="inputs" type="tel" size="10" maxlength="20" name="tel" id="input-tel"
+                                            value="<?php echo htmlspecialchars($post['tel']); ?>"> -->
                                     </div>
                                 </div>
                                 <div class="contactForm__input__items">
@@ -345,10 +352,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             class="colorRed">*必須</span></label>
                                     <div class="inputArea">
                                         <textarea required name="message"
+                                            id="input-message"></textarea>
+                                        <!-- <textarea required name="message"
                                             id="input-message"><?php echo htmlspecialchars($post['message']); ?></textarea>
                                         <?php if ($error['message'] === 'blank'): ?>
                                             <p class="error_msg">＊お問い合せ内容をご記入下さい。</p>
-                                        <?php endif; ?>
+                                        <?php endif; ?> -->
                                     </div>
                                 </div>
                             </div>
