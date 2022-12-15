@@ -1,5 +1,23 @@
 "use strict";
 {
+    window.onload = function () {
+
+        const loader = document.querySelector('.loader');
+        loader.classList.add("loaded");
+
+        const content = document.getElementById('content');
+        content.style.visibility = "visible";
+
+    };
+
+}
+
+
+
+
+
+
+{
     const $nav = document.getElementById('js-nav');
 
     let $windowWidth = window.innerWidth;
@@ -45,6 +63,8 @@
     });
 
 }
+
+
 
 {
     // ハンバーガーメニュー
