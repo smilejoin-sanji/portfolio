@@ -1186,12 +1186,14 @@ body {
   .loader > span {
     width: 350px;
     height: 350px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 470px) {
   .loader > span {
     width: 270px;
     height: 270px;
+    font-size: 14px;
   }
 }
 .loader > span::before {
