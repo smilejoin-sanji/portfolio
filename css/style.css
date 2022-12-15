@@ -15,12 +15,12 @@
 @media screen and (max-width: 825px) {
   .header {
     height: 280px;
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 470px) {
   .header {
     height: 230px;
-    overflow-x: hidden;
   }
 }
 .header__copy {
@@ -153,16 +153,16 @@
 }
 @media screen and (max-width: 825px) {
   .header__nav {
-    height: 48px;
+    right: -65vw;
+    height: 50px;
+    transition: all 0.6s;
   }
 }
 @media screen and (max-width: 470px) {
   .header__nav {
     bottom: 10px;
     height: 50px;
-    left: 100vw;
     width: 75vw;
-    transition: all 0.6s;
   }
 }
 .header__nav .navList {
@@ -226,7 +226,7 @@
   transition-duration: 0.4s;
   border-bottom: 1px solid #fff;
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 825px) {
   .header__nav #hamburger {
     display: flex;
   }
@@ -251,25 +251,20 @@
   background: rgb(1, 13, 35);
   z-index: 100;
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 825px) {
   .header .nav-fixed:hover {
     opacity: 1;
   }
 }
-@media screen and (max-width: 659px) {
+@media screen and (max-width: 825px) {
   .header .nav-fixed {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 470px) {
-  .header .nav-fixed {
-    width: 75vw;
     z-index: 100;
     opacity: 0.8;
   }
 }
 .header .js-nav-active {
-  left: 25vw;
+  left: auto;
+  right: 0;
   transition: all 0.6s;
 }
 

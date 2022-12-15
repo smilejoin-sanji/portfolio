@@ -8,6 +8,7 @@
         const content = document.getElementById('content');
         content.style.visibility = "visible";
 
+        loader.style.display = "none";
     };
 
 }
