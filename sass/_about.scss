@@ -194,11 +194,14 @@
             }
 
             @include tab {
-                width: 60%;
+                width: 55%;
+                margin: 0 auto;
+                padding-top: 50px;
             }
 
             @include tab-s {
                 width: 100%;
+                padding-top: 0;
                 padding-bottom: 165px;
             }
 
@@ -221,6 +224,7 @@
                 }
                 @include tab {
                     padding: 20px 10px 0;
+                    height: 510px;
 
                 }
 
@@ -228,8 +232,6 @@
                     height: 420px;
                     padding: 20px 20px 0;
                     background: rgb(1, 13, 35);
-
-
                 }
 
                 &::before {

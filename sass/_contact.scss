@@ -55,6 +55,11 @@
             z-index: 2;
             padding-bottom: 134px;
 
+            @include desktop-l {
+                max-width: 1000px;
+            }
+
+
             @include tab-s {
                 padding-bottom: 80px;
             }

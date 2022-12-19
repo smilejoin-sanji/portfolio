@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Damion&family=Vujahday+Script&family=Yuji+Mai&display=swap');
 
 html {
+
     scroll-behavior: smooth;
 }
 
@@ -133,8 +134,13 @@ body {
     width: 100vw;
     visibility: hidden;
     transition: visibility 0.3s;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
+#content::-webkit-scrollbar {
+    display:none;
+}
 
 .wrap {
 

@@ -1,11 +1,19 @@
 @use 'responsive' as *;
 
 #works {
-    margin-top: 165px;
-    width: 100%;
+    width: 80%;
+    margin: 165px auto 0;
+
+    @include desktop {
+        width: 85%;
+    }
+    @include desktop-s {
+        width: 90%;
+    }
 
     @include tab {
         margin-top: 90px;
+        width: 100%;
     }
 
     .workList {
@@ -32,18 +40,8 @@
             transition:  all 0.5s;
             z-index: 2;
 
-            // animation: rotate 10s infinite;
-
-            @include desktop-l {
-                transform: scale(0.8);
-                // animation: rotate-desktop-l 10s infinite;
-
-            }
-
             @include tab {
                 box-shadow: none;
-                transform: scale(1);
-                // animation: rotate-tab 10s infinite;
             }
 
             &>a {
@@ -121,40 +119,3 @@
         }
     }
 }
-
-// @keyframes rotate {
-//     0% {
-//         transform: rotate3d(0, 40, 0, -10deg);
-//     }
-
-//     100% {
-//         transform: rotate3d(0, 40, 0, 10deg);
-//     }
-// }
-
-// @keyframes rotate-desktop-l {
-
-//     0% {
-//         transform: scale(0.8) rotate3d(0, 40, 0, -10deg);
-
-//     }
-
-//     100% {
-//         transform: scale(0.8) rotate3d(0, 40, 0, 10deg);
-        
-//     }
-
-// }
-// @keyframes rotate-tab {
-
-//     0% {
-//         transform: scale(1) rotate3d(0, 40, 0, -10deg);
-
-//     }
-
-//     100% {
-//         transform: scale(1) rotate3d(0, 40, 0, 10deg);
-
-//     }
-
-// }

@@ -162,6 +162,7 @@
   .header__nav {
     bottom: 10px;
     height: 50px;
+    right: -75vw;
     width: 75vw;
   }
 }
@@ -527,12 +528,23 @@
 }
 
 #works {
-  margin-top: 165px;
-  width: 100%;
+  width: 80%;
+  margin: 165px auto 0;
+}
+@media screen and (max-width: 1570px) {
+  #works {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #works {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 825px) {
   #works {
     margin-top: 90px;
+    width: 100%;
   }
 }
 #works .workList {
@@ -560,15 +572,9 @@
   transition: all 0.5s;
   z-index: 2;
 }
-@media screen and (max-width: 1690px) {
-  #works .workList__items {
-    transform: scale(0.8);
-  }
-}
 @media screen and (max-width: 825px) {
   #works .workList__items {
     box-shadow: none;
-    transform: scale(1);
   }
 }
 #works .workList__items > a {
@@ -682,6 +688,11 @@
   padding: 0 5%;
   z-index: 2;
   padding-bottom: 134px;
+}
+@media screen and (max-width: 1690px) {
+  #contact .contactForm .form__box {
+    max-width: 1000px;
+  }
 }
 @media screen and (max-width: 659px) {
   #contact .contactForm .form__box {
@@ -990,12 +1001,15 @@
 }
 @media screen and (max-width: 825px) {
   #about .wrap .career {
-    width: 60%;
+    width: 55%;
+    margin: 0 auto;
+    padding-top: 50px;
   }
 }
 @media screen and (max-width: 659px) {
   #about .wrap .career {
     width: 100%;
+    padding-top: 0;
     padding-bottom: 165px;
   }
 }
@@ -1019,6 +1033,7 @@
 @media screen and (max-width: 825px) {
   #about .wrap .career__list {
     padding: 20px 10px 0;
+    height: 510px;
   }
 }
 @media screen and (max-width: 659px) {
@@ -1254,6 +1269,12 @@ body {
   width: 100vw;
   visibility: hidden;
   transition: visibility 0.3s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#content::-webkit-scrollbar {
+  display: none;
 }
 
 .wrap {
